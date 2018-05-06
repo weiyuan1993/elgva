@@ -1,26 +1,33 @@
 {
-    "manifest_version": 2,
-  
-    "name": "elgva",
-    "description": "Watch Avgle video without click any ad.",
-    "version": "1.0",
-    "icons": {
-		"128": "icon-128.png"
-	},
-    "browser_action": {
-      "default_icon": "icon-64.png",
-      "default_popup": "popup.html"
-    },
-    "background": {
-      "page": "background.html"
-    },  
-    "content_scripts": [
-      {
-        "matches": ["*://avgle.com/*","*://pussl48.com/*"],
-        "js": ["elgva.js"]
-      }
-    ],
-    "permissions": [
-      "tabs", "https://avgle.com/*"
-    ]
-  }
+  "manifest_version": 2,
+  "name": "elgva",
+  "description": "Watch Avgle video without click any ad.",
+  "version": "1.0",
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon-64.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://avgle.com/*",
+        "*://pussl48.com/*",
+        "*://www.58b.tv/*"
+      ],
+      "js": [
+        "elgva.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://www.58b.tv/*",
+    "https://avgle.com/*"
+  ]
+}
